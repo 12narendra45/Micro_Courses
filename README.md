@@ -1,7 +1,5 @@
 # MicroCourses — Mini LMS (Frontend)
 
-A concise README for the frontend of the MicroCourses mini-LMS project. This file documents the project goals, user workflows, how to run the app locally, the main backend API endpoints used by the frontend, required environment variables, packages, and placeholders for six screenshots.
-
 ## Project overview
 
 MicroCourses is a small Learning Management System (LMS) built as a single-page React application (Vite + Tailwind CSS) that works with an Express/MongoDB backend. It supports three roles: Learner, Creator, and Admin. The app demonstrates role-based pages, course and lesson creation, learner enrollment and progress tracking, and certificate issuance for completed courses.
@@ -137,29 +135,6 @@ Replace the placeholder images in `public/screenshots/` (or `src/assets/`) with 
    ![Progress](public/screenshots/progress.png)
 6. Course Details
    ![Course Details](public/screenshots/course-certificate.png)
-
-Create a folder `public/screenshots/` (or `LMS/public/screenshots/`) and add the six PNG files there; the README will show them on GitHub/Netlify if the images exist.
-
-## Notes & next steps
-
-- Replace the placeholder live links with your real deployed URLs.
-- If you'd like, I can add the screenshots to the repo if you upload them or tell me where to capture them.
-- I can also generate a short demo GIF for the learner flow.
-
-## Contributing
-
-If you want to extend the project, open an issue or submit a PR. Typical tasks:
-- Add automated tests for backend routes
-- Improve error handling and validation on the backend
-- Add file upload for lesson resources
-- Add pagination and filtering for large course catalogs
-
----
-
-Project maintained by CH Venkata Narendra. See source on GitHub: https://github.com/12narendra45/Micro_Courses
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
