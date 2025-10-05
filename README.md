@@ -1,4 +1,4 @@
-# MicroCourses — Mini LMS (Frontend)
+# MicroCourses — Mini LMS 
 
 ## Project overview
 
@@ -12,7 +12,7 @@ Key frontend features:
 - Learner flows: enroll, play lessons, mark complete, view progress and certificates
 - Admin flows: review and approve courses, view course stats
 
-## Quick workflow (high level)
+## Quick workflow 
 
 - Visitor registers or logs in.
 - Creator creates courses and adds lessons (includes transcript field).
@@ -20,13 +20,13 @@ Key frontend features:
 - System tracks enrollment progress; when a course is complete a certificate can be issued/viewed.
 - Admin reviews newly submitted courses and approves them; approved courses are visible to learners.
 
-## Frontend (this repo)
+## Frontend 
 
 - Folder: `LMS/`
 - Tech: React (Vite), Tailwind CSS, React Router
 - Dev server: Vite (default port 5173)
 
-## Backend (used by this frontend)
+## Backend 
 
 - Folder in workspace: `LmsBackend/` (Express + Mongoose)
 - Backend base URL (example used in frontend): `https://lmsbackend-e22.onrender.com` — replace with your deployed backend URL or local backend URL when running locally.
