@@ -127,9 +127,9 @@ Replace the placeholder images in `public/screenshots/` (or `src/assets/`) with 
 1. Creator Dashboard
    ![Creator Dashboard](public/screenshots/creator-dashboard.png)
 2. Registration
-   ![Registration](public/screenshots/registration.png)
+   ![Registration](public/screenshots/register(2).png)
 3. Login
-   ![Login](public/screenshots/login.png)
+   ![Login](public/screenshots/login(2).png)
 4. Progress
    ![Progress](public/screenshots/progress.png)
 5. Course Details
