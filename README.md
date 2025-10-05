@@ -1,0 +1,168 @@
+# MicroCourses — Mini LMS (Frontend)
+
+A concise README for the frontend of the MicroCourses mini-LMS project. This file documents the project goals, user workflows, how to run the app locally, the main backend API endpoints used by the frontend, required environment variables, packages, and placeholders for six screenshots.
+
+## Project overview
+
+MicroCourses is a small Learning Management System (LMS) built as a single-page React application (Vite + Tailwind CSS) that works with an Express/MongoDB backend. It supports three roles: Learner, Creator, and Admin. The app demonstrates role-based pages, course and lesson creation, learner enrollment and progress tracking, and certificate issuance for completed courses.
+
+Key frontend features:
+- Login / Register with test credentials (displayed on the Login page)
+- Role-based dashboards (Learner, Creator, Admin)
+- Course listing, search and course details
+- Creator flows: create course, add lessons (including transcript)
+- Learner flows: enroll, play lessons, mark complete, view progress and certificates
+- Admin flows: review and approve courses, view course stats
+
+## Quick workflow (high level)
+
+- Visitor registers or logs in.
+- Creator creates courses and adds lessons (includes transcript field).
+- Learner views courses, enrolls, watches lessons, and marks lessons complete.
+- System tracks enrollment progress; when a course is complete a certificate can be issued/viewed.
+- Admin reviews newly submitted courses and approves them; approved courses are visible to learners.
+
+## Frontend (this repo)
+
+- Folder: `LMS/`
+- Tech: React (Vite), Tailwind CSS, React Router
+- Dev server: Vite (default port 5173)
+
+## Backend (used by this frontend)
+
+- Folder in workspace: `LmsBackend/` (Express + Mongoose)
+- Backend base URL (example used in frontend): `https://lmsbackend-e22.onrender.com` — replace with your deployed backend URL or local backend URL when running locally.
+
+## Main API endpoints used by the frontend
+
+Note: When endpoints require authentication, include a JWT either in header `x-auth-token` or `Authorization: Bearer <token>`.
+
+- POST /auth/register — Register a new user
+- POST /auth/login — Login (returns token + user)
+- GET /auth/me — Get current user profile (requires auth)
+
+- GET /courses — List courses (public)
+- GET /courses/:id — Get course details (public)
+- GET /courses/:id/progress — Get enrollment progress (auth)
+
+- POST /creator/courses — Creator: create course (auth: Creator)
+- GET /creator/courses — Creator: list their courses (auth: Creator)
+- POST /creator/courses/:id/lessons — Creator: add lesson to course (includes `transcript`) (auth: Creator)
+
+- POST /enroll/:courseId — Enroll a learner in a course (auth: Learner)
+- GET /learn/:lessonId — Get lesson details (auth: Learner)
+- POST /learn/:lessonId/complete — Mark a lesson complete (auth: Learner)
+
+- POST /admin/courses/:id/approve — Admin: approve a course (auth: Admin)
+- GET /admin/course/:id/stats — Admin: fetch course stats (auth: Admin)
+
+- GET /certificates/:id — Get certificate details / view issued certificate (auth)
+
+The backend may expose additional routes for analytics, uploads, and certificate generation; check the `LmsBackend/routes` folder for the full list.
+
+## Environment variables
+
+Backend (set these on your machine or hosting provider):
+- `MONGO_URI` — MongoDB connection string
+- `JWT_SECRET` — JWT signing secret
+- `REDIS_URL` — (optional) Redis URL if using Redis features
+- `PORT` — optional backend port
+
+Frontend:
+- If the frontend uses a Vite env var for API base url, set `VITE_API_URL` or update `src/api.js`'s BASE_URL to your backend URL.
+
+## Install & run (PowerShell)
+
+From the frontend folder (`LMS`):
+
+```powershell
+cd C:\Users\asus\Desktop\Shackthon\LMS
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+From the backend folder (`LmsBackend`) — minimal example:
+
+```powershell
+cd C:\Users\asus\Desktop\Shackthon\LmsBackend
+npm install
+# run with node or nodemon (nodemon was included as dev dependency)
+node index.js
+# or if you have nodemon installed globally: nodemon index.js
+```
+
+Make sure the backend env vars are set before starting the backend.
+
+## Packages 
+
+Frontend (selected):
+- react, react-dom, react-router-dom
+- vite, tailwindcss, autoprefixer
+- react-icons, lucide-react, react-chartjs-2
+
+Backend (selected from `LmsBackend/package.json`):
+- express, mongoose, jsonwebtoken, cors
+- bcrypt / bcryptjs, dotenv
+- redis (and rate-limit-redis) — if used for rate-limiting/idempotency
+
+Run `npm install` in each folder to install the full set of packages listed in their respective `package.json` files.
+
+## Live demo / deployment
+
+If you deployed the frontend to a host (Netlify/Render/Vercel), paste the live URL here:
+
+- Frontend live URL: https://learningmanager.netlify.app
+
+
+## Test credentials (already displayed on the Login page)
+
+- Admin: admin@gmail.com / admin123
+- Creator: creator@gmail.com / 123456
+
+## Screenshots (placeholders)
+
+Replace the placeholder images in `public/screenshots/` (or `src/assets/`) with actual screenshots named as below.
+
+1. Learner Dashboard
+   ![Learner Dashboard](public/screenshots/learner-dashboard.png)
+2. Creator Dashboard
+   ![Creator Dashboard](public/screenshots/creator-dashboard.png)
+3. Registration
+   ![Registration](public/screenshots/registration.png)
+4. Login
+   ![Login](public/screenshots/login.png)
+5. Progress
+   ![Progress](public/screenshots/progress.png)
+6. Course Details
+   ![Course Details](public/screenshots/course-certificate.png)
+
+Create a folder `public/screenshots/` (or `LMS/public/screenshots/`) and add the six PNG files there; the README will show them on GitHub/Netlify if the images exist.
+
+## Notes & next steps
+
+- Replace the placeholder live links with your real deployed URLs.
+- If you'd like, I can add the screenshots to the repo if you upload them or tell me where to capture them.
+- I can also generate a short demo GIF for the learner flow.
+
+## Contributing
+
+If you want to extend the project, open an issue or submit a PR. Typical tasks:
+- Add automated tests for backend routes
+- Improve error handling and validation on the backend
+- Add file upload for lesson resources
+- Add pagination and filtering for large course catalogs
+
+---
+
+Project maintained by CH Venkata Narendra. See source on GitHub: https://github.com/12narendra45/Micro_Courses
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
