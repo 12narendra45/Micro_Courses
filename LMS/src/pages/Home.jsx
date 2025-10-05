@@ -6,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl gap-8">
         <div className="md:w-1/2 w-full flex justify-center">
-          <img src="/public/home.png" alt="MicroCourses Banner" className="rounded-xl shadow-lg w-full h-64 object-cover" />
+          <img src="/home.png" alt="MicroCourses Banner" className="rounded-xl shadow-lg w-full h-64 object-cover" />
         </div>
         <div className="md:w-1/2 w-full bg-white bg-opacity-90 p-10 rounded-xl shadow-xl text-center">
           <h1 className="text-5xl font-extrabold mb-4 text-purple-700 drop-shadow">Welcome to MicroCourses</h1>

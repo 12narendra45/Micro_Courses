@@ -34,7 +34,7 @@ export default function Register() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-xl p-8">
         <div className="hidden md:block md:w-1/2 pr-8">
-          <img src="/public/registration.png" alt="Register" className="rounded-xl shadow-lg w-full h-64 object-cover" />
+          <img src="/registration.png" alt="Register" className="rounded-xl shadow-lg w-full h-64 object-cover" />
         </div>
 
         <form className="md:w-1/2 w-full" onSubmit={handleSubmit}>
