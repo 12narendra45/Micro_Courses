@@ -125,15 +125,15 @@ If you deployed the frontend to a host (Netlify/Render/Vercel), paste the live U
 
 
 1. Creator Dashboard
-   ![Creator Dashboard](Micro_Courses/LMS/public/screenshots/creator-dashboard.png)
+   ![Creator Dashboard](LMS/public/screenshots/creator-dashboard.png)
 2. Registration
-   ![Registration]((Micro_Courses/LMS/public/screenshots/register(2).png)
+   ![Registration](LMS/public/screenshots/register(2).png)
 3. Login
-   ![Login]((Micro_Courses/LMS/public/screenshots/login(2).png)
+   ![Login](LMS/public/screenshots/login(2).png)
 4. Progress
-   ![Progress]((Micro_Courses/LMS/public/screenshots/progress.png)
+   ![Progress](LMS/public/screenshots/progress.png)
 5. Course Details
-   ![Course Details]((Micro_Courses/LMS/public/screenshots/course.png)
+   ![Course Details](LMS/public/screenshots/course.png)
 
 Currently, two official plugins are available:
 
