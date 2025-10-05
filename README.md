@@ -127,9 +127,9 @@ If you deployed the frontend to a host (Netlify/Render/Vercel), paste the live U
 1. Creator Dashboard
    ![Creator Dashboard](LMS/public/screenshots/creator-dashboard.png)
 2. Registration
-   ![Registration](LMS/public/screenshots/register(2).png)
+   ![Registration](LMS/public/screenshots/register.png)
 3. Login
-   ![Login](LMS/public/screenshots/login(2).png)
+   ![Login](LMS/public/screenshots/login.png)
 4. Progress
    ![Progress](LMS/public/screenshots/progress.png)
 5. Course Details
