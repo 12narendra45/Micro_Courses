@@ -121,19 +121,19 @@ If you deployed the frontend to a host (Netlify/Render/Vercel), paste the live U
 
 ## Screenshots (placeholders)
 
-Replace the placeholder images in `public/screenshots/` (or `src/assets/`) with actual screenshots named as below.
+
 
 
 1. Creator Dashboard
-   ![Creator Dashboard](public/screenshots/creator-dashboard.png)
+   ![Creator Dashboard](Micro_Courses/LMS/public/screenshots/creator-dashboard.png)
 2. Registration
-   ![Registration](public/screenshots/register(2).png)
+   ![Registration]((Micro_Courses/LMS/public/screenshots/register(2).png)
 3. Login
-   ![Login](public/screenshots/login(2).png)
+   ![Login]((Micro_Courses/LMS/public/screenshots/login(2).png)
 4. Progress
-   ![Progress](public/screenshots/progress.png)
+   ![Progress]((Micro_Courses/LMS/public/screenshots/progress.png)
 5. Course Details
-   ![Course Details](public/screenshots/course.png)
+   ![Course Details]((Micro_Courses/LMS/public/screenshots/course.png)
 
 Currently, two official plugins are available:
 
