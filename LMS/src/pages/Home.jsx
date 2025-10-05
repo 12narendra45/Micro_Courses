@@ -21,7 +21,7 @@ export default function Home() {
         <p>
           Project by [Your Name]. View the source code on{' '}
           <a
-            href="https://github.com/your-username/your-repo-name"
+            href="https://github.com/12narendra45/Micro_Courses"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-600 hover:underline"
