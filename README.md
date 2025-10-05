@@ -123,18 +123,17 @@ If you deployed the frontend to a host (Netlify/Render/Vercel), paste the live U
 
 Replace the placeholder images in `public/screenshots/` (or `src/assets/`) with actual screenshots named as below.
 
-1. Learner Dashboard
-   ![Learner Dashboard](public/screenshots/learner-dashboard.png)
-2. Creator Dashboard
+
+1. Creator Dashboard
    ![Creator Dashboard](public/screenshots/creator-dashboard.png)
-3. Registration
+2. Registration
    ![Registration](public/screenshots/registration.png)
-4. Login
+3. Login
    ![Login](public/screenshots/login.png)
-5. Progress
+4. Progress
    ![Progress](public/screenshots/progress.png)
-6. Course Details
-   ![Course Details](public/screenshots/course-certificate.png)
+5. Course Details
+   ![Course Details](public/screenshots/course.png)
 
 Currently, two official plugins are available:
 
